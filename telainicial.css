@@ -736,6 +736,7 @@ article img {
 
     #container2-1 {
         margin-left: 0px;
+        top: -25px;
     }
 
     #login {
@@ -755,6 +756,7 @@ article img {
         width: 300px;
         text-align: center;
         margin-right: 0;
+        font-size: 14px;
     }
 
     #txte {
@@ -773,6 +775,7 @@ article img {
     #c3-t2 {
         width: 300px;
         text-align: center;
+        display: none;
     }
 
 
@@ -798,7 +801,7 @@ article img {
     }
 
     #container3 {
-        height: 230px;
+        height: 140px;
     }
 
     #sas {
