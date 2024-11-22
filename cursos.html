@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #div1 {
+            height: 100%;
+            display: flex;
+        }
+
+        #container {
+            display: flex;
+            background: #F5F9FC; 
+            flex-wrap: nowrap;
+            flex: 1 1 auto;
+            width: 100vw;
+            height: 742px;
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        #container2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 0 1 auto;
+        }
+
+        .d {
+            background-color: white;
+            margin-right: 50px;
+            margin-top: 30px;
+        }
+
+        #d1 {
+            margin-left: 40px;
+            width: 21.8vw;
+            height: 156px;
+        }
+
+        #titulo {
+            background: #F90;
+            width: 21.8vw;
+            height: 48px;
+        }
+
+        .cursos {
+            width: 27.8vw;
+            height: 30vh;
+            margin-right: 50px;
+            background-color: rgb(255, 255, 255);
+            margin-top: 50px;
+        }
+
+        .titulo2 {
+            width: 27.8vw;
+            height: 78px;
+            background: #004587;
+        }
+
+        @media screen and (max-width: 975px) {
+    
+            #container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #container2 {
+                align-items: center;
+                justify-content: center;
+                position: relative;
+    
+            }
+
+            #titulo {
+                width: 40vw;
+            }
+
+            #d1 {
+                width: 40vw;
+            }
+
+            .titulo2 {
+                width: 35vw;
+            }
+
+            .cursos {
+                width: 35vw;
+
+            }
+        }
+
+        @media screen and (max-width: 875px) {
+            #container2 {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cursos {
+                width: 60vw;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .titulo2 {
+                width: 60vw;
+            }
+
+            #titulo {
+                width: 45vw;
+            }
+
+            #d1 {
+                width: 45vw;
+            }
+            
+        }
+
+        @media screen and (max-width: 600px) {
+            .cursos {
+                width: 80vw;
+                margin: 25px 0px;
+            }
+
+            .titulo2 {
+                width: 80vw;
+            }
+
+            #titulo {
+                width: 65vw;
+            }
+
+            #d1 {
+                width: 65vw;
+            }
+
+            #container2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-self: center;
+
+            }
+
+            #c {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div1">
+            <div class="d" id="d1">
+                <p id="titulo"></p>
+            </div>
+        </div>
+        <div id="container2">
+            <div class="cursos">
+                <p class="titulo2"></p>
+            </div>
+            <div class="cursos">
+                <p class="titulo2"></p>
+            </div>
+            <div id="c" class="cursos">
+                <p class="titulo2"></p>
+            </div>
+            <div id="c" class="cursos">
+                <p class="titulo2"></p>
+            </div>
+            <div id="c" class="cursos">
+                <p class="titulo2"></p>
+            </div>
+            <div id="c" class="cursos">
+                <p class="titulo2"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
