@@ -132,27 +132,40 @@
             .cursos {
                 width: 80vw;
                 margin: 25px 0px;
+                height: 32vh;
             }
 
             .titulo2 {
                 width: 80vw;
                 padding: 15px 30px;
                 color: white;
-                font-size: 1.1em;
+                font-size: 1em;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                font-weight: 500;
             }
 
             .conteudo {
-                padding: 15px 30px;
-                color: black;
+                padding: 10px 30px;
+                color: #495057;
                 font-size: 0.9em;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
+            }
+
+            .conteudo2 {
+                padding: 15px 20px;
+                color: #495057;
+                font-size: 1em;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                
             }
 
 
             .bi {
                 margin-right: 5px;
+            }
+
+            #buscar {
+                color: #fcc100;
             }
 
             #titulo {
@@ -179,6 +192,22 @@
             #sla {
                 color: #004587;
             }
+
+            .mais {
+                font-size: 1em;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f44455;
+                text-align: center;
+                text-decoration: none;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 40px;
+                font-size: 12px;
+                margin: auto;
+                position: relative;
+                left: 30%;
+                top: 10px;
+            }
         }
 
     </style>
@@ -187,17 +216,25 @@
     <div id="container">
         <div id="div1">
             <div class="d" id="d1">
-                <p id="titulo" class="titulo2"><i class="bi bi-search"></i>Filtro</p>
+                <p id="titulo" class="titulo2"><i id="buscar" class="bi bi-search"></i>Filtro</p>
+                <p class="conteudo2">Cidade</p>
+                <p class="conteudo2">Turno</p>
             </div>
         </div>
         <div id="container2">
             <div class="cursos">
-                <p class="titulo2">Corte masculino na maquina</p>
+                <p class="titulo2">CORTE MASCULINO NA MAQUINA</p>
                 <p class="conteudo"><i class="bi bi-calendar"></i> 15/03/2025 até 05/04/2025 | 08:00 às 12:00 (Sábado )</p>
+                <p class="conteudo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle align-middle mr-2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>Presencial</p>
+                <p class="conteudo"><i class="bi bi-geo-alt"></i>Recife</p>
+                <a class="mais" href="">Mais informacoes</a>
             </div>
             <div class="cursos">
-                <p class="titulo2">Corte masculino na tesoura</p>
+                <p class="titulo2">CORTE MASCULINO NA TESOURA</p>
                 <p class="conteudo"><i class="bi bi-calendar"></i> 15/03/2025 até 05/04/2025 | 08:00 às 12:00 (Sábado )</p>
+                <p class="conteudo"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shuffle align-middle mr-2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>Presencial</p>
+                <p class="conteudo"><i class="bi bi-geo-alt"></i>Recife</p>
+                <a class="mais" href="">Mais informacoes</a>
             </div>
             <div id="c" class="cursos">
                 <p class="titulo2"></p>

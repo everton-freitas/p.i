@@ -46,7 +46,7 @@ header > div > img {
     display: none;
 }
 
-nav > a {
+nav  a {
     text-decoration: none;
     color: white;
     font-size: 16px;
@@ -556,12 +556,14 @@ article img {
     }
 
     .a1 {
-        height: 750px;
+        height: 100%;
+        padding: 50px 0px;
     }
 
     .conteudo {
-        font-size: 14px;
+        font-size: 18px;
         width: 600px;
+        font-family: sans-serif;
         letter-spacing: 1px;
         margin-bottom: 0px;
     }
@@ -730,6 +732,10 @@ article img {
 }
 
 @media screen and (max-width: 600px) {
+
+    iframe {
+        height: 840px;
+    }
     
     #container1 img {
         width: 55px;
@@ -847,7 +853,7 @@ article img {
 
     .titulo {
         width: 93vw;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     #salao {
@@ -863,6 +869,7 @@ article img {
     .conteudo {
         width: 90vw;
         text-align: justify;
+        margin-bottom: 60px;
     }
 
     .a1 img {
