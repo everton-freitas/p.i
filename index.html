@@ -6,6 +6,7 @@
     <title>Document</title><!-- Bootstrap CSS via Cloudflare -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">    
     <link rel="stylesheet" href="telainicial.css">
+    <script src="script.js"></script>
     <style>
         .footer {
             background-color: #000f41;
@@ -33,14 +34,16 @@
         <div id="container1">
             <img src="logo.png" alt="">
             <nav>
-                <svg id="menu-h" xmlns="http://www.w3.org/2000/svg" width="35" height="28" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <svg id="menu-h" xmlns="http://www.w3.org/2000/svg" width="35" height="28" onclick="aparecerMenu()" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                   </svg>
+            <div id="menu-oculto">
                 <a class="menu" href="">INICIO</a>
                 <a class="menu" href="">AGENDAMENTO</a>
                 <a class="menu" href="">SERVICOS</a>
                 <a class="menu" href="">CURSOS</a>
                 <a id="login" href="login.html">LOGIN</a>
+            </div>
             </nav>
         </div>
     </header>
