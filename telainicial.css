@@ -565,7 +565,6 @@ article img {
     }
 
     .conteudo {
-        font-size: 18px;
         width: 600px;
         font-family: sans-serif;
         letter-spacing: 1px;
@@ -919,8 +918,11 @@ article img {
 
     .conteudo {
         width: 90vw;
-        text-align: justify;
         margin-bottom: 60px;
+    }
+
+    .a1 {
+        background: #F5F9FC;
     }
 
     .a1 img {
