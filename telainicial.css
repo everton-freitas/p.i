@@ -626,6 +626,7 @@ article img {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
         z-index: 1000; /* Garante que fique acima do menu */
         transition: transform 0.3s ease-in-out; /* Transição para empurrar */
+        border: 1px dotted white;
     }
 
     #header.push {
