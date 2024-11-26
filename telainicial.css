@@ -535,20 +535,24 @@ article img {
 
     }
 
-    #menu-oculto {
-        display: none;
-        position: absolute;
-        left: 4px;
-        background-color: white;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        width: 150px;
+
+    nav {
+        position: relative;
+        font-family: Arial, sans-serif;
     }
-    #menu-oculto a {
-        color: black;
-        padding: 10px;
-        text-decoration: none;
-        display: block;
+    
+    #menu-h {
+        cursor: pointer;
+        margin: 10px;
     }
+    
+    
+    #menu-oculto #login {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    
     
 
     .titulo {
@@ -591,6 +595,46 @@ article img {
         top: 510px;
         font-size: 12px;
     }
+
+    #menu-oculto {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 250px;
+     height: 100vh;
+     background-color: #222533;
+     color: white;
+     transform: translateX(-100%);
+     transition: transform 0.3s ease-in-out;
+     z-index: 10;
+     
+    }    
+    #menu-oculto.show {
+        transform: translateX(0);
+    }
+
+    .menu {
+        display: block;
+    }
+
+    
+
+    header {
+        position: fixed; /* Fixa o header no topo */
+        top: 0;
+        left: 0;
+        width: 100%; /* Ocupa toda a largura da tela */
+        background-color: #f4f4f4; /* Cor de fundo do header */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+        z-index: 1000; /* Garante que fique acima do menu */
+        transition: transform 0.3s ease-in-out; /* Transição para empurrar */
+    }
+
+    #header.push {
+        margin-left: 250px;
+    }
+
+
 }
 
 @media screen and (max-width: 975px) { 
@@ -625,6 +669,7 @@ article img {
         flex-direction: column-reverse;
         height: 650px;
         margin-left: 50px;
+        margin-top: 50px;
     }
 
     #container2-1-2 {
@@ -790,6 +835,10 @@ article img {
         left: 35px;
     }
 
+    #container2-1 {
+        z-index: 1;
+    }
+
     #email {
         position: relative;
         left: 300px;
@@ -858,6 +907,8 @@ article img {
 
     #salao {
         width: 340px;
+        z-index: 1;
+
     }
 
     #container2-1-2 {
