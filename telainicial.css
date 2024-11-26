@@ -626,7 +626,6 @@ article img {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
         z-index: 1000; /* Garante que fique acima do menu */
         transition: transform 0.3s ease-in-out; /* Transição para empurrar */
-        border: 1px dotted white;
     }
 
     #header.push {
@@ -834,10 +833,7 @@ article img {
         left: 35px;
     }
 
-    #container2-1 {
-    border: 1px dotted white;        
-    }
-
+    
     #email {
         position: relative;
         left: 300px;
@@ -905,13 +901,13 @@ article img {
     }
 
     #salao {
-        width: 340px;
+        width: 300px;
         z-index: 1;
 
     }
 
     #container2-1-2 {
-        width: 340px;
+        width: 300px;
     }
 
 
@@ -935,7 +931,7 @@ article img {
 
 
     #funcionamento {
-        width: 340px;
+        width: 300px;
     }
 
 }
