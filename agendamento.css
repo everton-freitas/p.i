@@ -59,12 +59,40 @@ img {
     display: flex;
     height: 64px;
     background-color: #fff;
-    margin-bottom: 8px;
+    margin-top: 8px;
     align-items: center;
     padding: 0px 16.5px;
     width: 100%;
     border-radius: 7px;
     cursor: pointer;
+    border: 1px solid lightgray;
+}
+
+.botao.ativa {
+    border-radius: 7px 7px 0 0;
+}
+
+.botao2 {
+    background-color: white;
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    align-items: center;
+    padding: 8px 16.5px;
+    width: 100%;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 0px;
+    border-top: none;
+    align-items: center;
+
+}
+
+
+.botao2:last-of-type {
+    border-bottom-left-radius: 7px; /* Ajuste o valor conforme necessário */
+    border-bottom-right-radius: 7px; /* Ajuste o valor conforme necessário */
 }
 
 
@@ -298,7 +326,7 @@ nav {
     
 
     #container2 {
-        height: 89vh;
+        height: 95vh;
     }
 
     #container2-1 > p {
