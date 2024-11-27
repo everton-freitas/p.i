@@ -135,7 +135,7 @@ function selecionarServico(servico) {
             div.className = 'botao2 conteudoOcultoSub';
             div.innerHTML = `
                 <p class="a1" onclick="selecionarSub('${sub.nome}', '${sub.valor}')">
-                    ${sub.nome} - <span class="valor">${sub.valor}</span>
+                    ${sub.nome} - <span class="valor"><strong>${sub.valor}</strong></span>
                 </p>`
             subcategoriaOpcoes.appendChild(div);
         });
