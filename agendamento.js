@@ -105,10 +105,25 @@ function selecionarServico(servico) {
 
     // Define as subcategorias dinamicamente
     const subcategorias = {
-        'Corte de Cabelo Masculino e Barba': ['Corte Masculino', 'Barba', 'Corte + Barba'],
-        'Corte de Cabelo Feminino': ['Corte Longo', 'Corte Curto', 'Corte em Camadas'],
-        'Manicure e Pedicure': ['Manicure', 'Pedicure', 'Combo'],
-        'Hidratação Capilar': ['Hidratação Rápida', 'Hidratação Profunda'],
+        'Corte de Cabelo Masculino e Barba': [
+            { nome: 'Corte Masculino', valor: 'R$ 30,00' },
+            { nome: 'Barba', valor: 'R$ 20,00' },
+            { nome: 'Corte + Barba', valor: 'R$ 45,00' }
+        ],
+        'Corte de Cabelo Feminino': [
+            { nome: 'Corte Longo', valor: 'R$ 50,00' },
+            { nome: 'Corte Curto', valor: 'R$ 40,00' },
+            { nome: 'Corte em Camadas', valor: 'R$ 55,00' }
+        ],
+        'Manicure e Pedicure': [
+            { nome: 'Manicure', valor: 'R$ 25,00' },
+            { nome: 'Pedicure', valor: 'R$ 30,00' },
+            { nome: 'Combo', valor: 'R$ 50,00' }
+        ],
+        'Hidratação Capilar': [
+            { nome: 'Hidratação Rápida', valor: 'R$ 35,00' },
+            { nome: 'Hidratação Profunda', valor: 'R$ 60,00' }
+        ]
     };
 
     const subcategoriaOpcoes = document.getElementById('subcategoriaOpcoes');
@@ -118,7 +133,10 @@ function selecionarServico(servico) {
         subcategorias[servico].forEach(sub => {
             const div = document.createElement('div');
             div.className = 'botao2 conteudoOcultoSub';
-            div.innerHTML = `<p class="a1" onclick="selecionarSub('${sub}')">${sub}</p>`;
+            div.innerHTML = `
+                <p class="a1" onclick="selecionarSub('${sub.nome}', '${sub.valor}')">
+                    ${sub.nome} - <span class="valor">${sub.valor}</span>
+                </p>`
             subcategoriaOpcoes.appendChild(div);
         });
     }
@@ -137,4 +155,18 @@ function selecionarSub(sub) {
 
     const conteudos = document.querySelectorAll('.conteudoOcultoSub');
     conteudos.forEach(conteudo => (conteudo.style.display = 'none'));
+}
+
+function selecionarSub(sub, valor) {
+    const botao = document.getElementById('subSelecionado');
+    botao.innerHTML = `<strong>${sub} - ${valor}</strong>`;
+
+    // Oculta as subcategorias
+    const conteudos = document.querySelectorAll('.conteudoOcultoSub');
+    conteudos.forEach(conteudo => (conteudo.style.display = 'none'));
+
+    // Atualiza o preço final acima do botão "Agendar"
+    const precoFinal = document.getElementById('precoFinal');
+    precoFinal.textContent = `Preço final: ${valor}`;
+    precoFinal.style.display = 'block';
 }

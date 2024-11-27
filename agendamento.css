@@ -72,6 +72,18 @@ img {
     border-radius: 7px 7px 0 0;
 }
 
+#precoFinal {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: auto;
+    position: relative;
+    left: 15px;
+}
+
+#final {
+    margin-top: auto;
+}
+
 .botao2 {
     background-color: white;
     display: flex;
@@ -110,7 +122,7 @@ img {
     padding: 20px 15px;
     cursor: pointer; /* Para indicar que é um botão clicável */
     border-radius: 7px; /* Para deixar as bordas arredondadas */
-    width: 50%;
+    margin-top: 10px;
 }
 
 #agendar:hover {
@@ -281,7 +293,7 @@ nav {
         padding: 20px 15px;
         cursor: pointer; /* Para indicar que é um botão clicável */
         border-radius: 7px; /* Para deixar as bordas arredondadas */
-        
+        margin-top: 10px;
     }
 
     #container2-1 > p {
