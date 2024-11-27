@@ -64,58 +64,77 @@ function aparecerMenu() {
     }
 }
 
-function clicar(botao) {
-    const conteudo = document.querySelector('.botao2')
-
-    if (conteudo.style.display === 'none') {
-        conteudo.style.display = 'block'
-        botao.classList.add('ativa')
-    } else {
-        conteudo.style.display = 'none'
-        botao.classList.remove('ativa')
-    }
-}
-
-function selecionarOpcao(elemento, opcao) {
-    const botao = document.getElementById('textoBotao')
-    botao.innerHTML = `<strong>${opcao}</strong>`
-
-    const conteudo = document.getElementById('conteudoOculto')
-    conteudo.style.display = 'none'
-
-
-}
-
-// selecione o tipo de servico
-
-function clicarServico(botao) {
-    // Seleciona todos os elementos com a classe 'conteudoOcultoServico'
-    const conteudos = document.querySelectorAll('.conteudoOcultoServico');
-
-    // Percorre todos os elementos e alterna o display
+function clicarFilial(botao) {
+    const conteudos = document.querySelectorAll('.conteudoOculto');
     conteudos.forEach(conteudo => {
-        if (conteudo.style.display === 'none' || conteudo.style.display === '') {
-            conteudo.style.display = 'flex';
-        } else {
-            conteudo.style.display = 'none';
-        }
+        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
     });
-
-    // Altera a classe do botão para mostrar que ele foi ativado
-    botao.classList.add('ativa');
 }
 
-function selecionarServico(servico) {
-    // Atualiza o texto do botão "Selecione o tipo de serviço"
-    const botao = document.getElementById('servicoSelecionado');
-    botao.innerHTML = `<strong>${servico}</strong>`;
+function selecionarFilial(filial) {
+    const botao = document.getElementById('textoBotao');
+    botao.innerHTML = `<strong>${filial}</strong>`;
 
-    // Oculta o menu
-    const conteudo = document.getElementById('conteudoOcultoServico');
-    conteudo.style.display = 'none';
+    const conteudos = document.querySelectorAll('.conteudoOculto');
+    conteudos.forEach(conteudo => (conteudo.style.display = 'none'));
 
-    // Ativa o botão (remove pointer-events e ajusta opacidade)
+    // Ativa o botão de tipo de serviço
     const openModalBtn2 = document.getElementById('openModalBtn2');
     openModalBtn2.style.pointerEvents = 'auto';
     openModalBtn2.style.opacity = '1';
+}
+
+function clicarServico() {
+    const conteudos = document.querySelectorAll('.conteudoOcultoServico');
+    conteudos.forEach(conteudo => {
+        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+    });
+}
+
+function selecionarServico(servico) {
+    const botao = document.getElementById('servicoSelecionado');
+    botao.innerHTML = `<strong>${servico}</strong>`;
+
+    const conteudos = document.querySelectorAll('.conteudoOcultoServico');
+    conteudos.forEach(conteudo => (conteudo.style.display = 'none'));
+
+    // Ativa o botão de subcategorias
+    const openModalBtn3 = document.getElementById('openModalBtn3');
+    openModalBtn3.style.pointerEvents = 'auto';
+    openModalBtn3.style.opacity = '1';
+
+    // Define as subcategorias dinamicamente
+    const subcategorias = {
+        'Corte de Cabelo Masculino e Barba': ['Corte Masculino', 'Barba', 'Corte + Barba'],
+        'Corte de Cabelo Feminino': ['Corte Longo', 'Corte Curto', 'Corte em Camadas'],
+        'Manicure e Pedicure': ['Manicure', 'Pedicure', 'Combo'],
+        'Hidratação Capilar': ['Hidratação Rápida', 'Hidratação Profunda'],
+    };
+
+    const subcategoriaOpcoes = document.getElementById('subcategoriaOpcoes');
+    subcategoriaOpcoes.innerHTML = ''; // Limpa as subcategorias antigas
+
+    if (subcategorias[servico]) {
+        subcategorias[servico].forEach(sub => {
+            const div = document.createElement('div');
+            div.className = 'botao2 conteudoOcultoSub';
+            div.innerHTML = `<p class="a1" onclick="selecionarSub('${sub}')">${sub}</p>`;
+            subcategoriaOpcoes.appendChild(div);
+        });
+    }
+}
+
+function clicarSubcategoria() {
+    const conteudos = document.querySelectorAll('.conteudoOcultoSub');
+    conteudos.forEach(conteudo => {
+        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+    });
+}
+
+function selecionarSub(sub) {
+    const botao = document.getElementById('subSelecionado');
+    botao.innerHTML = `<strong>${sub}</strong>`;
+
+    const conteudos = document.querySelectorAll('.conteudoOcultoSub');
+    conteudos.forEach(conteudo => (conteudo.style.display = 'none'));
 }
