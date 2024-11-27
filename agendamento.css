@@ -42,10 +42,11 @@ img {
 
 #container2 {
     background-color: #f7f9fa;
-    padding: 20px 24px;
+    padding: 20px 24px 0px 24px;
     display: flex;
     justify-content: center;
     height: 100%;
+    
 }
 
 #container2-1 > p {
@@ -115,7 +116,10 @@ img {
     border-bottom-right-radius: 7px; /* Ajuste o valor conforme necessário */
 }
 
+#subcategoriaOpcoes {
+    margin-bottom: 45px;
 
+}
 
 #agendar {
     margin-top: auto;
@@ -126,6 +130,7 @@ img {
     cursor: pointer; /* Para indicar que é um botão clicável */
     border-radius: 7px; /* Para deixar as bordas arredondadas */
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 #agendar:hover {
@@ -345,7 +350,7 @@ nav {
     
 
     #container2 {
-        height: 89vh;
+        height: 94vh;
     }
 
     #container2-1 > p {
