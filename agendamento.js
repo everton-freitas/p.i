@@ -64,12 +64,27 @@ function aparecerMenu() {
     }
 }
 
-function clicarFilial(botao) {
-    const conteudos = document.querySelectorAll('.conteudoOculto');
+// function clicarFilial(botao) {
+//     const conteudos = document.querySelectorAll('.conteudoOculto');
+//     conteudos.forEach(conteudo => {
+//         conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+//     });
+// }
+
+function clicarFilial() {
+    const conteudos = document.querySelectorAll('.conteudoOcultoFilial');
+
     conteudos.forEach(conteudo => {
-        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+        if (conteudo.classList.contains('show')) {
+            conteudo.classList.remove('show');
+            setTimeout(() => (conteudo.style.display = 'none'), 300); // Aguarda o fim da transição
+        } else {
+            conteudo.style.display = 'block'; // Torna o elemento visível antes de animar
+            setTimeout(() => conteudo.classList.add('show'), 10); // Adiciona a classe com atraso
+        }
     });
 }
+
 
 function selecionarFilial(filial) {
     const botao = document.getElementById('textoBotao');
@@ -86,8 +101,15 @@ function selecionarFilial(filial) {
 
 function clicarServico() {
     const conteudos = document.querySelectorAll('.conteudoOcultoServico');
+
     conteudos.forEach(conteudo => {
-        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+        if (conteudo.classList.contains('show')) {
+            conteudo.classList.remove('show');
+            setTimeout(() => (conteudo.style.display = 'none'), 300); // Espera o fim da transição
+        } else {
+            conteudo.style.display = 'flex'; // Garante que o elemento seja exibido
+            setTimeout(() => conteudo.classList.add('show'), 10); // Adiciona a classe com atraso
+        }
     });
 }
 
@@ -144,8 +166,15 @@ function selecionarServico(servico) {
 
 function clicarSubcategoria() {
     const conteudos = document.querySelectorAll('.conteudoOcultoSub');
+
     conteudos.forEach(conteudo => {
-        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
+        if (conteudo.classList.contains('show')) {
+            conteudo.classList.remove('show');
+            setTimeout(() => (conteudo.style.display = 'none'), 300); // Espera o fim da transição
+        } else {
+            conteudo.style.display = 'flex'; // Garante que o elemento seja exibido
+            setTimeout(() => conteudo.classList.add('show'), 10); // Adiciona a classe com atraso
+        }
     });
 }
 

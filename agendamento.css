@@ -102,7 +102,6 @@ img {
     align-items: center;
     font-size: 15px;
     flex: 0 0 auto;
-
 }
 
 .botao2:hover {
@@ -120,6 +119,20 @@ img {
     margin-bottom: 45px;
 
 }
+
+.conteudoOcultoSub, .conteudoOcultoServico, .conteudoOcultoFilial {
+    display: none; /* Mantém as opções escondidas inicialmente */
+    opacity: 0; /* Torna invisível */
+    transform: translateY(-10px); /* Move para cima um pouco */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Suaviza a transição */
+}
+
+.conteudoOcultoSub.show, .conteudoOcultoServico.show, .conteudoOcultoFilial.show {
+    display: block; /* Mostra a opção */
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Volta à posição original */
+}
+
 
 #agendar {
     margin-top: auto;
