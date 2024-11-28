@@ -1,58 +1,3 @@
-//  // Funções de abertura e fechamento dos modais
-//  function toggleModal(modalId, show) {
-//     document.getElementById(modalId).style.display = show ? 'block' : 'none';
-// }
-
-// document.getElementById('openModalBtn').onclick = function() {
-//     toggleModal('modalFilial', true);
-// };
-
-// document.getElementById('closeFilial').onclick = function() {
-//     toggleModal('modalFilial', false);
-// };
-
-// document.getElementById('openModalBtn2').onclick = function() {
-//     toggleModal('modalServico', true);
-// };
-
-// document.getElementById('closeServico').onclick = function() {
-//     toggleModal('modalServico', false);
-// };
-
-// document.getElementById('openModalBtn3').onclick = function() {
-//     toggleModal('modalSub', true);
-// };
-
-// document.getElementById('closeSub').onclick = function() {
-//     toggleModal('modalSub', false);
-// };
-
-// // Fechar modal ao clicar fora dele
-// window.onclick = function(event) {
-//     ['modalFilial', 'modalServico', 'modalSub'].forEach(function(modalId) {
-//         if (event.target == document.getElementById(modalId)) {
-//             toggleModal(modalId, false);
-//         }
-//     });
-// };
-
-// // Função de seleção
-// function selecionar(nome, idElemento) {
-//     document.getElementById(idElemento).innerHTML = `<strong>${nome}</strong>`;
-//     if (idElemento === 'filialSelecionada') {
-//         toggleModal('modalFilial', false);
-//         document.getElementById('openModalBtn2').style.pointerEvents = 'auto';
-//         document.getElementById('openModalBtn2').style.opacity = '1';
-//     } else if (idElemento === 'servicoSelecionado') {
-//         toggleModal('modalServico', false);
-//         document.getElementById('openModalBtn3').style.pointerEvents = 'auto';
-//         document.getElementById('openModalBtn3').style.opacity = '1';
-//     } else if (idElemento === 'subSelecionado') {
-//         toggleModal('modalSub', false);
-//     }
-// }
-
-
 // menu hamburguer
 function aparecerMenu() {
     let menu = document.getElementById('menu-oculto')
@@ -64,27 +9,12 @@ function aparecerMenu() {
     }
 }
 
-// function clicarFilial(botao) {
-//     const conteudos = document.querySelectorAll('.conteudoOculto');
-//     conteudos.forEach(conteudo => {
-//         conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
-//     });
-// }
-
-function clicarFilial() {
-    const conteudos = document.querySelectorAll('.conteudoOcultoFilial');
-
+function clicarFilial(botao) {
+    const conteudos = document.querySelectorAll('.conteudoOculto');
     conteudos.forEach(conteudo => {
-        if (conteudo.classList.contains('show')) {
-            conteudo.classList.remove('show');
-            setTimeout(() => (conteudo.style.display = 'none'), 300); // Aguarda o fim da transição
-        } else {
-            conteudo.style.display = 'block'; // Torna o elemento visível antes de animar
-            setTimeout(() => conteudo.classList.add('show'), 10); // Adiciona a classe com atraso
-        }
+        conteudo.style.display = conteudo.style.display === 'none' || conteudo.style.display === '' ? 'flex' : 'none';
     });
 }
-
 
 function selecionarFilial(filial) {
     const botao = document.getElementById('textoBotao');
